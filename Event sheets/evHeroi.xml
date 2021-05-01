@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evHeroi</name>
+    <events>
+        <event-block sid="534031447683335">
+            <conditions>
+                <condition id="2" name="Key is down" sid="581903445340515" type="key">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="279744707492662" type="heroi">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="568667053755422" type="heroi">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="439286627277875">
+            <conditions>
+                <condition id="2" name="Key is down" sid="199505456370719" type="key">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="669508199266708" type="heroi">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="520490203247887" type="heroi">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="583090412392857">
+            <conditions>
+                <condition id="2" name="Key is down" sid="864304785759467" type="key">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="450691385443479" type="heroi">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="574025268866012">
+            <conditions>
+                <condition id="2" name="Key is down" sid="308704364239992" type="key">
+                    <param id="0" name="Key">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="927187471697088" type="heroi">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="682586978752490">
+            <conditions>
+                <condition behavior="8Direction" id="1" name="Compare speed" sid="962617056089499" type="heroi">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="688824740186130" type="heroi">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="841264726197111">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="388191024383995" type="heroi">
+                    <param id="0" name="Object">area_dano</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="669848838789493" type="heroi">
+                    <param id="0" name="Instance variable">BATI</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

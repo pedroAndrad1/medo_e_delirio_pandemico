@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evFase1</name>
+    <events>
+        <include>evHeroi</include>
+        <include>evBabacas</include>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evBabacas</name>
+    <events>
+        <event-block any="1" sid="149998254180533">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="806600580130935" type="babaca">
+                    <param id="0" name="Object">Ground</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="172280755562066" type="babaca">
+                    <param id="0" name="Object">babaca</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="847703309866847">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="645616982712007" type="babaca">
+                            <param id="0" name="Instance variable">action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="395253845066246" type="babaca">
+                            <param id="0" name="Instance variable">action</param>
+                            <param id="1" name="Value">&quot;left&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175787866237512">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="878466762305375" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="694007925539840" type="babaca">
+                            <param id="0" name="Instance variable">action</param>
+                            <param id="1" name="Value">&quot;right&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="869681433693510">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="484565853895965" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="782571175885079">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="108593744445865" type="System">
+                            <param id="0" name="Object">babaca</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="521857844316327">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="682962767726196" type="babaca">
+                                    <param id="0" name="Instance variable">action</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="944140379823871" type="babaca">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="231194741790560" type="babaca">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="728268479207507">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="939728967044602" type="babaca">
+                                    <param id="0" name="Instance variable">action</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="123409073701753" type="babaca">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="601844035784415" type="babaca">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="940854684172206">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="680132033438052" type="babaca">
+                                    <param id="0" name="Instance variable">chance_parar</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="503879068222773" type="babaca">
+                                    <param id="0" name="Max Speed">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="705107828976170">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="548674318163999" type="babaca">
+                                    <param id="0" name="Instance variable">chance_parar</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="720986651739932" type="babaca">
+                                    <param id="0" name="Max Speed">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="825802428558997">
+                            <conditions>
+                                <condition id="12" name="Compare speed" sid="876696273788240" type="babaca">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="414955763577433" type="babaca">
+                                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="221117155028875">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="998977257724751" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="906604277633503" type="System">
+                    <param id="0" name="Object">babaca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="737457181709954" type="babaca">
+                    <param id="0" name="Object">tosse</param>
+                    <param id="1" name="Layer">&quot;main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="168592681508962" type="babaca">
+                    <param id="0" name="Object">area_dano</param>
+                    <param id="1" name="Layer">&quot;main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="987174434772271" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="617958380845214" type="area_dano" />
+            </actions>
+        </event-block>
+        <event-block sid="216958229634357">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="142846271331637" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="195687205797040" type="babaca">
+                    <param id="0" name="Instance variable">chance_parar</param>
+                    <param id="1" name="Value">random(0,1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="561994320188987">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="555553124086989" type="babaca" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="409639324676082" type="babaca">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
