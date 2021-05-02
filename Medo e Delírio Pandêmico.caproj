@@ -10,12 +10,16 @@
     <unique-id>3bwlcn9957t85</unique-id>
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -65,14 +69,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214596227406712" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="background" sid="955859344500615">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="907470461761143" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\T-Gamer\Desktop\medo e delírio pandêmico\Assets\background-2.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -142,7 +138,8 @@
         <object-type name="heroi" sid="286856305683420">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="BATI" sid="965249799658891" type="number" />
+                <instance-variable name="vidas" sid="463105235232757" type="number" />
+                <instance-variable name="invicible" sid="933658331861571" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="739262911272389">
@@ -153,6 +150,9 @@
                 </behavior-type>
                 <behavior-type name="ScrollTo" sid="212812189116904">
                     <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="180246081395659">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -180,20 +180,186 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="background" sid="147002023382991">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373424431665971" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\T-Gamer\Desktop\medo e delírio pandêmico\Assets\genocida.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mascara" sid="269902318790545">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320158411881924" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\T-Gamer\Desktop\medo e delírio pandêmico\Assets\mascara.png">
+                        <collision-poly>
+                            <point x="0.160131" y="0.240196" />
+                            <point x="0.5" y="0.107843" />
+                            <point x="0.808824" y="0.286765" />
+                            <point x="0.838235" y="0.5" />
+                            <point x="0.77451" y="0.661765" />
+                            <point x="0.5" y="0.904412" />
+                            <point x="0.230392" y="0.654412" />
+                            <point x="0.151961" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="babacaSpawner" sid="311707288036264">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="439941058376814" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vidas" sid="235596468121686">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="audio" sid="845451784833381">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="lockdown" sid="702278824050283">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="235276930660719" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\T-Gamer\Desktop\medo e delírio pandêmico\Assets\lockdown.png">
+                        <collision-poly>
+                            <point x="0.22" y="0.22" />
+                            <point x="0.5" y="0.108" />
+                            <point x="0.774" y="0.226" />
+                            <point x="0.938" y="0.5" />
+                            <point x="0.774" y="0.774" />
+                            <point x="0.5" y="0.894" />
+                            <point x="0.22" y="0.78" />
+                            <point x="0.05" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vacina" sid="628047445977245">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="655986841300626" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\T-Gamer\Desktop\medo e delírio pandêmico\Assets\vacina.png">
+                        <collision-poly>
+                            <point x="0.0644531" y="0.0644531" />
+                            <point x="0.5" y="0.447266" />
+                            <point x="0.695313" y="0.304688" />
+                            <point x="0.876953" y="0.5" />
+                            <point x="0.855469" y="0.855469" />
+                            <point x="0.5" y="0.826172" />
+                            <point x="0.285156" y="0.714844" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="background_menu" sid="733955834238903">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411950631060511" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\T-Gamer\Desktop\medo e delírio pandêmico\Assets\background_menu.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="titulo" sid="656896713130628">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="iniciar" sid="130417289179452">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="direitos_da_musica" sid="614656108923792">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="derrota_background" sid="296951975312890">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="725126818382166" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\T-Gamer\Desktop\medo e delírio pandêmico\Assets\derrota_background.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="titulo_derrota" sid="750067489309852">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="tentar_dnv" sid="260354238501059">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="vitoria_background" sid="802122569693664">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806187809468338" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\T-Gamer\Desktop\medo e delírio pandêmico\Assets\back_vitoria.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="titulo_vitoria" sid="244683113040298">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="jogar_dnv" sid="604000875218135">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="historia" sid="841051693101372">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="historia_2" sid="530000506089301">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="instrucoes" sid="461266685295682">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="instrucoes1" sid="885823254250260">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="iniciar_jogo" sid="629954385213033">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>menu_inicial.xml</layout>
         <layout>fase1.xml</layout>
+        <layout>tela_derrota.xml</layout>
+        <layout>tela_vitória.xml</layout>
+        <layout>tela_instrucoes1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>evFase1.xml</event-sheet>
         <event-sheet>evBabacas.xml</event-sheet>
         <event-sheet>evHeroi.xml</event-sheet>
+        <event-sheet>evMenu_Inicial.xml</event-sheet>
+        <event-sheet>evDerrota.xml</event-sheet>
+        <event-sheet>evVitoria.xml</event-sheet>
+        <event-sheet>evInstrucoes1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="key" uid="39" />
+        <global-instance type="audio" uid="42">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="tosse.ogg" />
+        <file name="Trilha-Sonora-completa-do-Jornal-Nacional-_2017-ATUAL_.ogg" />
+        <file name="Genocida_-o-que-é.ogg" />
+        <file name="Som-de-mulher-gritando-assustada-♪-Barulho-de-grito-de-terror-1.ogg" />
+        <file name="Lula-lá.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

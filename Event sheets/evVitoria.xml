@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evVitoria</name>
+    <events>
+        <event-block sid="587714769286244">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="415082301628329" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="296153112103140" type="audio">
+                    <param id="0" name="Audio file">Lula-lá</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;musica_vitoria&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="600367799839904">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="738506080673657" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="205760178003091" type="audio">
+                    <param id="0" name="Tag">&quot;musica_vitoria&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="630726849808542">
+            <conditions>
+                <condition id="0" name="On clicked" sid="636920058081561" type="jogar_dnv" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="132164053270561" type="System">
+                    <param id="0" name="Layout">fase1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

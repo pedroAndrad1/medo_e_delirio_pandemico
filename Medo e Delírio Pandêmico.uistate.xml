@@ -10,10 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">fase1</layout>
-        <event-sheet order="1">evFase1</event-sheet>
-        <event-sheet active="1" order="2">evBabacas</event-sheet>
-        <event-sheet order="3">evHeroi</event-sheet>
+        <layout active="1" order="1">fase1</layout>
+        <layout order="3">menu_inicial</layout>
+        <layout order="4">tela_vitória</layout>
+        <event-sheet order="2">evVitoria</event-sheet>
+        <event-sheet order="5">evFase1</event-sheet>
+        <event-sheet order="6">evHeroi</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,16 +28,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/mapa/" />
         <folder expanded="1" path="animation-folder/Ground/" />
-        <folder expanded="1" path="animation-folder/background/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/babaca/" />
         <folder expanded="1" path="animation-folder/heroi/" />
         <folder expanded="1" path="animation-folder/area_dano/" />
+        <folder expanded="1" path="animation-folder/background/" />
+        <folder expanded="1" path="animation-folder/mascara/" />
+        <folder expanded="1" path="animation-folder/babacaSpawner/" />
+        <folder expanded="1" path="animation-folder/lockdown/" />
+        <folder expanded="1" path="animation-folder/vacina/" />
+        <folder expanded="1" path="animation-folder/background_menu/" />
+        <folder expanded="1" path="animation-folder/derrota_background/" />
+        <folder expanded="1" path="animation-folder/vitoria_background/" />
     </folders-expanded>
 </c2uistate>

@@ -5,5 +5,33 @@
     <events>
         <include>evHeroi</include>
         <include>evBabacas</include>
+        <event-block sid="670436064979605">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="179153604646066" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="991983522474742" type="babacaSpawner">
+                    <param id="0" name="Object">babaca</param>
+                    <param id="1" name="Layer">&quot;main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="320970355793349" type="audio">
+                    <param id="0" name="Audio file">Trilha-Sonora-completa-do-Jornal-Nacional-_2017-ATUAL_</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;musica_fase1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="581095150437964">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="793354872467101" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="920214014493576" type="audio">
+                    <param id="0" name="Tag">&quot;musica_fase1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
